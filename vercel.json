@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.js"
+      }
+    ],
+    "env": {
+        "DB_USER": "@portafolio-db-user",
+        "DB_PASSWORD": "@portafolio-db-password",
+        "DB_HOST": "@portafolio-db-host",
+        "DB_NAME": "@portafolio-db-name"
+    }
+}
